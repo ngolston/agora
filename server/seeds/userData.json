@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1
+    },
+    {
+        "username": "LakersFan143"
+    },
+    {
+        "email": "lakers@gmail.com"
+    },
+    {
+        "password": "kobe1"
+    },
+    {
+        "bio": "Just living life! Live. Laugh. Love."
+    },
+    {
+        "profilePic": "{url}"
+    },
+    {
+        "posts": []
+    },
+    {
+        "comments": []
+    }
+]

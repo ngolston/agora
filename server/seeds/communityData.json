@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1
+    },
+    {
+        "title": "Sports"
+    },
+    {
+        "description": "Everything Sports: Especially Basketball and Volleyball"
+    },
+    {
+        "image": "{url}"
+    },
+    {
+        "relatedPosts": []
+    },
+    {
+        "createdAt": "{timestamp}"
+    }
+]
