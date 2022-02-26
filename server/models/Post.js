@@ -4,20 +4,44 @@ const dateFormat = require('../utils/dateFormat');
 
 const postSchema = new Schema(
   {
-    postText: {
+      id: {
+        type: Number
+      },
+    title: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 80
+    },
+    text: {
       type: String,
-      required: 'Leave your post here!',
+      required: true,
       minlength: 1,
-      maxlength: 280
+      maxlength: 400
+    },
+    contentType: {
+        type: dropdown,
     },
     createdAt: {
       type: Date,
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
     },
-    username: {
+    authorUsername: {
       type: String,
       required: true
+    },
+    authorId: {
+        type: Number,
+        required: true
+      },
+    communityId: {
+        type: Number,
+        required: true
+      },
+    comments: {
+        type: Array,
+        required: false
     },
     reactions: [reactionSchema]
   },
