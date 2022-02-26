@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const reactionSchema = require('./Reaction');
 const dateFormat = require('../utils/dateFormat');
 
-const postSchema = new Schema(
+const userSchema = new Schema(
   {
       id: {
         type: Number
