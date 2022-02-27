@@ -25,7 +25,7 @@ const CommunitySchema = new Schema(
             required: false,
             url: []
         },
-        posts: {
+        relatedPosts: {
             type: Array,
             required: false,
 
