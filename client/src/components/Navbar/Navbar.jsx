@@ -1,14 +1,18 @@
+import React from "react";
 import "./Navbar.css";
+import { Search } from "@material-ui/icons"
 
 export default function Navbar() {
     return (
         <div className="navbarContainer">
             <div className="navbarLeft">
-                <span className="logo">Agora</span>
+                <div>
+                    <img src="/assets/AgoraLogo.png" alt="logopic" className="logo" />
+                </div>
             </div>
             <div className="navbarCenter">
                 <div className="searchBar">
-                    <Search />
+                    <Search className="searchIcon" />
                     <input placeholder="Search Agora" className="searchInput" />
 
 
@@ -16,8 +20,9 @@ export default function Navbar() {
             </div>
             <div className="navbarRight">
                 <div className="navbarLinks">
-                    <span className="navbarLink">Create Post</span>
-                    <span className="navbarlink">Profile/Signup</span>
+                    <span className="navbarLink">Create Post |</span>
+                    <span className="navbarLink">Log In |</span>
+                    <span className="navbarLink">Sign Up</span>
                 </div>
             </div>
 

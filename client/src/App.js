@@ -1,8 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import React from "react";
+import Home from "./pages/home/home";
+// import { AccountCircleIcon } from '@mui/icons-material/AccountCircle';
+// import { Person } from "@mui/icons-material"
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return <Home />
+  // return <AccountCircleIcon />
 }
 
 export default App;
