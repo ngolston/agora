@@ -1,26 +1,32 @@
 [
     {
-        "id": 1
+        "id": 1,
+        "title": "Lakers Are Making The Playoffs!!!",
+        "text": "Even with the injuries to AD and a few other role players, Lebron is still playing fantastic basketball and with Westbrook and Lebron clicking at the same time they can beat anybody! See you in the Finals!",
+        "createdAt": "{timestamp}",
+        "authorUsername": "LakersFan143",
+        "authorId": 1,
+        "communityId": 1,
+        "reactions": "{reactionCount}"
     },
     {
-        "title": "Lakers Are Making The Playoffs!!!"
+        "id": 2,
+        "title":"MongoDB All  the Way!",
+        "text": "With SQL being the class-leader to this point, there is still a lot to be desired in the database framework, leaving the door wide open for MongoDB to take over. MongoDB offers nearly all of the same features as SQL, but offers the ability to do more refined searches without having to his the server every time.",
+        "createdAt": "{timestamp}",
+        "authorUsername": "MeMongo",
+        "authorId": 2,
+        "communityId": 2,
+        "reactions": "{reactionCount}"
     },
     {
-        "text": "Even with the injuries to AD and a few other role players, Lebron is still playing fantastic basketball and with Westbrook and Lebron clicking at the same time they can beat anybody! See you in the Finals!"
-    },
-    {
-        "createdAt": "{timestamp}"
-    },
-    {
-        "authorUsername": "LakersFan143"
-    },
-    {
-        "authorId": 1
-    },
-    {
-        "communityId": 1
-    },
-    {
+        "id": 3,
+        "title":"Martix Insurrection was so bad!",
+        "text": "I had such high hopes, and there were some really cool looking parts, but overall the pplot seemed like a rehash of the other movies. So disappointed!",
+        "createdAt": "{timestamp}",
+        "authorUsername": "TakeTheRedPill",
+        "authorId": 3,
+        "communityId": 3,
         "reactions": "{reactionCount}"
     }
 ]

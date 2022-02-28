@@ -4,10 +4,10 @@ const { Post } = require('../models');
 const post = require('./postData.json');
 
 // db.once('open', async () => {
-//   await Tech.deleteMany({});
+//   await post.deleteMany({});
 
-//   const technologies = await Tech.insertMany(techData);
+//   const technologies = await Tech.insertMany(postData);
 
-//   console.log('Technologies seeded!');
+//   console.log('Posts seeded!');
 //   process.exit(0);
 // });

@@ -1,20 +1,26 @@
 [
     {
-        "id": 1
+        "id": 1,
+        "title": "Sports",
+        "description": "Everything Sports: Especially Basketball and Volleyball",
+        "image": "{url}",
+        "relatedPosts": [],
+        "createdAt": "{timestamp}"
     },
     {
-        "title": "Sports"
+        "id": 2,
+        "title": "Technology",
+        "description": "All about Technology and Coding",
+        "image": "{url}",
+        "relatedPosts": [],
+        "createdAt": "{timestamp}"
     },
     {
-        "description": "Everything Sports: Especially Basketball and Volleyball"
-    },
-    {
-        "image": "{url}"
-    },
-    {
-        "relatedPosts": []
-    },
-    {
+        "id": 3,
+        "title": "Movies",
+        "description": "Movies! Movies! Movies!",
+        "image": "{url}",
+        "relatedPosts": [],
         "createdAt": "{timestamp}"
     }
 ]
