@@ -1,13 +1,21 @@
 const db = require('../config/connection');
-const { Post } = require('../models');
+const { Post, Community, User } = require('../models');
+const postData = require('./postData.json');
+const user = require('./userData.json');
+const community = require('./communityData.json');
 
-const post = require('./postData.json');
+db.once('open', async () => {
+    await Post.deleteMany({});
+    const post = await Post.insertMany(postData);
+    console.log('Posts seeded!');
 
-// db.once('open', async () => {
-//   await post.deleteMany({});
+    await User.deleteMany({});
+    const user = await User.insertMany(userData);
+    console.log('Users seeded!');
 
-//   const technologies = await Tech.insertMany(postData);
+    await Community.deleteMany({});
+    const community = await Community.insertMany(communityData);
+    console.log('Communities seeded!');
 
-//   console.log('Posts seeded!');
-//   process.exit(0);
-// });
+    process.exit(0);
+});

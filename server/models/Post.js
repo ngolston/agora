@@ -1,12 +1,8 @@
 const { Schema, model } = require('mongoose');
 const reactionSchema = require('./Reaction');
-const dateFormat = require('../utils/dateFormat');
 
 const postSchema = new Schema(
   {
-      id: {
-        type: Number
-      },
     title: {
         type: String,
         required: true,
@@ -18,11 +14,6 @@ const postSchema = new Schema(
       required: true,
       minlength: 1,
       maxlength: 400
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: timestamp => dateFormat(timestamp)
     },
     authorUsername: {
       type: String,
