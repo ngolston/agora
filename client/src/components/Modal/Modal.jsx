@@ -13,10 +13,10 @@ export default function Modal({ setOpenModal }) {
                     }}> X </button>
                 </div>
                 <div className="title">
-                    <h1>Sign Up</h1>
+                    <h1>Wanna Join?</h1>
                 </div>
                 <div className="body">
-                    <p>Add your email to get started</p>
+                    <p>To  get started using Agora, hit continue to register</p>
                 </div>
                 <div className="footer">
                     <button onClick={() => {
