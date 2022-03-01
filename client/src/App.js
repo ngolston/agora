@@ -1,8 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import Home from "./pages/home/home";
+// import Modal from "../src/components/Modal/Modal";
+// import { AccountCircleIcon } from '@mui/icons-material/AccountCircle';
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+
+  return <Home />
 }
 
 export default App;

@@ -1,4 +1,5 @@
 const { Post, User, Community } = require('../models');
+const { modelName } = require('../models/Post');
 
 const resolvers = {
   Query: {
@@ -25,6 +26,7 @@ const resolvers = {
         return Post;
       },
     },
-  };
-  
-  module.exports = resolvers;
+  }
+}
+
+ module.exports = resolvers

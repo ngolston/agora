@@ -37,7 +37,7 @@ const userSchema = new Schema(
         minlength: 1
     }
 });
-//may need {} around reaction count
+
 userSchema.virtual('reactionCount').get(function() {
     return this.posts.reduce((a,b) => a+b.reactionCount,0);
   });
