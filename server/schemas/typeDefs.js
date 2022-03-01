@@ -6,7 +6,7 @@ const typeDefs = gql`
      title: String!
      text: String!
      authorUsername: String!
-     communityId: Number!
+     communityId: ID!
    }
 
     type User {
@@ -14,12 +14,12 @@ const typeDefs = gql`
      userName: String!
      text: String!
      authorUsername: String!
-     posts: Array!
+     posts: [Post]!
     }
 
     type Query {
-      post: [Post]
-      user:(_id: String)   
+      Post: [Post]
+      User(_id: String): User
    }
   
    type Mutation {
