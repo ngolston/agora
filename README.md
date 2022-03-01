@@ -3,7 +3,7 @@
 ## Description
     Agora is a social networking app that allows users to post, comment, and be part of engaging communities.
 ## User Story
-    A user wants an application that allows him/her to communicate with others via posts and photos so that the user can connect with people with shared interests, learn, and have fun.
+    A someone who enjoys communicating with others from the comfort of their phone and likes finding out more about their interests, I want to be able to post my own thoughts and read other interesting thoughts, so that I can feel more connected with others, learn, and have fun.
 
 ## Visual
 
