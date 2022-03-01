@@ -30,7 +30,10 @@ const postSchema = new Schema(
         type: Array,
         required: false
     },
-    reactions: [reactionSchema]
+    reactions: {
+      type: Number,
+      default: 0
+    }
   },
   {
     toJSON: {
@@ -41,7 +44,7 @@ const postSchema = new Schema(
 );
 
 postSchema.virtual('reactionCount').get(function() {
-    return this.reactions.length;
+    return this.reactions++;
   });
 
 const Post = model('Post', postSchema);

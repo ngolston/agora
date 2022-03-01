@@ -9,7 +9,9 @@ const commentSchema = new Schema(
       maxlength: 200
     },
     contentType: {
-        type: Dropdown
+        type: String, 
+        enum: ["TEXT", "PHOTO"], 
+        default: "TEXT"
     },
     authorUsername: {
       type: String,
@@ -27,7 +29,10 @@ const commentSchema = new Schema(
         type: Array,
         required: false
     },
-    reactions: [reactionSchema]
+    reactions: {
+      type:Number,
+      default:0,
+    }
   },
   {
     toJSON: {
@@ -37,7 +42,7 @@ const commentSchema = new Schema(
   }
 );
 
-postSchema.virtual('reactionCount').get(function() {
+commentSchema.virtual('reactionCount').get(function() {
   return this.reactions.length;
 });
 

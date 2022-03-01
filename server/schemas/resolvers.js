@@ -4,29 +4,25 @@ const { modelName } = require('../models/Post');
 const resolvers = {
   Query: {
     Post: async () => {
-      return Post.findAll({});
+      return Post.find({});
     },
-    Query: {
       User: async () => {
-        return User.findAll({});
+        return User.find({});
       },
-      Query: {
-        Community: async () => {
-          return Community.findAll({});
-        },
-      },
+        // Community: async () => {
+        //   return Community.findAll({});
+        // },
     },
-    Mutation: {
-      createUser: async (parent, args) => {
-        const User = await User.create(args);
-        return User;
-      },
-      createPost: async (parent, args) => {
-        const Post = await Post.create(args);
-        return Post;
-      },
-    },
+    // Mutation: {
+    //   createUser: async (parent, args) => {
+    //     const User = await User.create(args);
+    //     return User;
+    //   },
+    //   createPost: async (parent, args) => {
+    //     const Post = await Post.create(args);
+    //     return Post;
+    //   },
+    // },
   }
-}
 
  module.exports = resolvers

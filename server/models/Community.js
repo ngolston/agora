@@ -17,9 +17,8 @@ const communitySchema = new Schema(
             trim: true
         },
         image: {
-            type: Image,
+            type: String,
             required: false,
-            url: []
         },
         relatedPosts: {
             type: Array,

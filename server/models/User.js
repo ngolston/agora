@@ -12,11 +12,9 @@ const userSchema = new Schema(
     },
     email: {
         type: String,
-        validate: true
-    },
+        },
     hashed_password: {
         type: String,
-        validate: true,
         required: true
     },
     bio: {
@@ -26,7 +24,7 @@ const userSchema = new Schema(
         maxlength: 100
     },
     profilePic: {
-        url: []
+        type:String
     },
     posts: {
         type: Array,
@@ -39,7 +37,7 @@ const userSchema = new Schema(
 });
 
 userSchema.virtual('reactionCount').get(function() {
-    return this.posts.reduce((a,b) => a+b.reactionCount,0);
+    return this.posts.reduce((a,b) => a+b,0);
   });
 
 const User = model('User', userSchema);
