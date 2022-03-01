@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "username": "LakersFan143",
         "email": "lakers@gmail.com",
         "password": "kobe1",
@@ -10,7 +9,6 @@
         "comments": []
     },
     {
-        "id": 2,
         "username": "EmilysBaby",
         "email": "me@yahoo.com",
         "password": "littlebabyJill1",
@@ -20,7 +18,6 @@
         "comments": []
     },
     {
-        "id": 3,
         "username": "Starburns1",
         "email": "starburns1@gmail.com",
         "password": "tothemoon1!git status",

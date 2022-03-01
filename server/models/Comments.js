@@ -1,12 +1,8 @@
 const { Schema, model } = require('mongoose');
 const reactionSchema = require('./Reaction');
-const dateFormat = require('../utils/dateFormat');
 
 const commentSchema = new Schema(
   {
-      id: {
-        type: Number
-      },
     text: {
       type: String,
       required: true,
@@ -15,11 +11,6 @@ const commentSchema = new Schema(
     },
     contentType: {
         type: Dropdown
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: timestamp => dateFormat(timestamp)
     },
     authorUsername: {
       type: String,

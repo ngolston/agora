@@ -1,12 +1,8 @@
 const { Schema, model } = require('mongoose');
 
-
 const userSchema = new Schema(
   {
-      id: {
-        type: Number
-      },
-    username: {
+    userName: {
         type: String,
         required: true,
         minlength: 1,
@@ -18,9 +14,10 @@ const userSchema = new Schema(
         type: String,
         validate: true
     },
-    password: {
+    hashed_password: {
         type: String,
-        validate: true
+        validate: true,
+        required: true
     },
     bio: {
         type: String,
@@ -33,13 +30,17 @@ const userSchema = new Schema(
     },
     posts: {
         type: Array,
-        minlength: 1
+        minlength: 0
     },
     comments: {
         type: Array,
         minlength: 1
     }
 });
+//may need {} around reaction count
+userSchema.virtual('reactionCount').get(function() {
+    return this.posts.reduce((a,b) => a+b.reactionCount,0);
+  });
 
 const User = model('User', userSchema);
 
