@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const cors = require("cors");
 require("dotenv").config({ path: "./config.env" });
+const mongoose = require("mongoose");
 // const db = require('./config/connection');
 // get driver connection
 
