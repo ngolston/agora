@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Sports",
+        "description": "Everything Sports: Especially Basketball and Volleyball",
+        "image": "{url}",
+        "relatedPosts": []
+    },
+    {
+        "title": "Technology",
+        "description": "All about Technology and Coding",
+        "image": "{url}",
+        "relatedPosts": []
+       
+    },
+    {
+        "title": "Movies",
+        "description": "Movies! Movies! Movies!",
+        "image": "{url}",
+        "relatedPosts": []
+    }
+]

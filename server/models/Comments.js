@@ -1,12 +1,7 @@
 const { Schema, model } = require('mongoose');
-const reactionSchema = require('./Reaction');
-const dateFormat = require('../utils/dateFormat');
 
 const commentSchema = new Schema(
   {
-      id: {
-        type: Number
-      },
     text: {
       type: String,
       required: true,
@@ -14,12 +9,9 @@ const commentSchema = new Schema(
       maxlength: 200
     },
     contentType: {
-        type: Dropdown
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: timestamp => dateFormat(timestamp)
+        type: String, 
+        enum: ["TEXT", "PHOTO"], 
+        default: "TEXT"
     },
     authorUsername: {
       type: String,
@@ -37,7 +29,10 @@ const commentSchema = new Schema(
         type: Array,
         required: false
     },
-    reactions: [reactionSchema]
+    reactions: {
+      type:Number,
+      default:0,
+    }
   },
   {
     toJSON: {
@@ -47,7 +42,7 @@ const commentSchema = new Schema(
   }
 );
 
-postSchema.virtual('reactionCount').get(function() {
+commentSchema.virtual('reactionCount').get(function() {
   return this.reactions.length;
 });
 

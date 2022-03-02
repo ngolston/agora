@@ -1,11 +1,7 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
 
-const CommunitySchema = new Schema(
+const communitySchema = new Schema(
     {
-        id: {
-            type: Number
-        },
         title: {
             type: String,
             required: true,
@@ -21,22 +17,19 @@ const CommunitySchema = new Schema(
             trim: true
         },
         image: {
-            type: Image,
+            type: String,
             required: false,
-            url: []
         },
-        posts: {
+        relatedPosts: {
             type: Array,
-            required: false,
-
+            required: false
         },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-            get: timestamp => dateFormat(timestamp)
-        }
     });
 
-const Community = model('Community', CommunitySchema);
+    communitySchema.virtual('postCount').get(function() {
+        return this.relatedPosts.length;
+      });
+
+const Community = model('Community', communitySchema);
 
 module.exports = Community;
