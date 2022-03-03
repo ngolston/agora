@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const commentSchema = new Schema(
   {
@@ -6,46 +6,42 @@ const commentSchema = new Schema(
       type: String,
       required: true,
       minlength: 1,
-      maxlength: 200
+      maxlength: 200,
     },
     contentType: {
-        type: String, 
-        enum: ["TEXT", "PHOTO"], 
-        default: "TEXT"
+      type: String,
+      enum: ["TEXT", "PHOTO"],
+      default: "TEXT",
     },
     authorUsername: {
       type: String,
-      required: true
+      required: true,
     },
-    authorId: {
-        type: Number,
-        required: true
-      },
     communityId: {
-        type: Number,
-        required: true
-      },
+      type: String,
+      required: true,
+    },
     comments: {
-        type: Array,
-        required: false
+      type: String,
+      required: false,
     },
     reactions: {
-      type:Number,
-      default:0,
-    }
+      type: Number,
+      default: 0,
+    },
   },
   {
     toJSON: {
-      getters: true
+      getters: true,
     },
-    id: false
+    id: false,
   }
 );
 
-commentSchema.virtual('reactionCount').get(function() {
+commentSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
 
-const Comments = model('Comments', commentSchema);
+const Comments = model("Comments", commentSchema);
 
 module.exports = Comments;
