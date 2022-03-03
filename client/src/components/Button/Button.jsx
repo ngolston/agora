@@ -1,4 +1,4 @@
-function Button(props) {
+/*function Button(props) {
     let classNames = "";
     if (props.outline) {
         classNames += "";
@@ -10,4 +10,4 @@ function Button(props) {
     );
 }
 
-export default Button;
+export default Button;*/

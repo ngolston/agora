@@ -9,7 +9,7 @@ export default function PostsListing() {
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost: 3035/comments', { withCredentials: true })
+        axios.get('http://localhost:3001/comments', { withCredentials: true })
             .then(response => setComments(response.data));
 
     }, []);

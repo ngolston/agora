@@ -1,12 +1,12 @@
 import React from 'react';
 import TimeAgo from 'timeago-react';
-import Button from "./Button";
+import Button from "../Button/Button";
 import CommentForm from "./CommentForm";
 import { useState, useContext } from 'react';
 import RootCommentCon from "./RootCommentCon";
-import ReactMarkdown from "react-markdown";
-import gfm from "remark-gfm";
-import Voting from "./Voting";
+/*import ReactMarkdown from "react-markdown";*/
+/*import gfm from "remark-gfm";*/
+
 
 export default function CommentS(props) {
     const [showForm, setShowForm] = useState(false);
@@ -26,10 +26,7 @@ export default function CommentS(props) {
                         </div>
                         <div >
                             <div >
-                                <div>
-                                    <ReactMarkdown remarkPlugins={[gfm]} children={comment.body} />
-                                </div>
-                                <Voting commentId={comment._id} />
+
                                 <Button type={'button'}
                                     onClick={() => setShowForm(comment._id)}>Reply</Button>
                                 {comment._id === showForm && (

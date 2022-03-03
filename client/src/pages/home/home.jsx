@@ -1,21 +1,21 @@
-// import { Modal } from "@material-ui/core";
+
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import PostFormModal from "../../components/Post/PostFormModal";
-import AuthModal from "../../components/Auth/AuthModal";
+import Modal from "../../components/Modal/Modal";
+import MainPage from "../../components/Main/MainPage";
+import NewPage from "../../components/New/NewPage";
 
-export default function Home() {
+function Home() {
     return (<div>
-        <Router>
+        <MainPage>
             <Navbar />
             <NewPage />
             <PostFormModal />
-            <AuthModal />
-        </Router>
+            <Modal />
+        </MainPage>
     </div>
 
     )
 }
-
-
-
+export default Home;
