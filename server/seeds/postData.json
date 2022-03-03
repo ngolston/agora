@@ -5,7 +5,7 @@
         "createdAt": "{timestamp}",
         "authorUsername": "LakersFan143",
         "communityId": 1,
-        "reactions": "{reactionCount}"
+        "reactions": 5
     },
     {
         "title":"MongoDB All  the Way!",
@@ -13,7 +13,7 @@
         "createdAt": "{timestamp}",
         "authorUsername": "MeMongo",
         "communityId": 2,
-        "reactions": "{reactionCount}"
+        "reactions": 2
     },
     {
         "title":"Martix Insurrection was so bad!",
@@ -21,6 +21,6 @@
         "createdAt": "{timestamp}",
         "authorUsername": "TakeTheRedPill",
         "communityId": 3,
-        "reactions": "{reactionCount}"
+        "reactions": 8
     }
 ]

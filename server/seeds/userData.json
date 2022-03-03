@@ -1,6 +1,6 @@
 [
     {
-        "username": "LakersFan143",
+        "userName": "LakersFan143",
         "email": "lakers@gmail.com",
         "password": "kobe1",
         "bio": "Just living life! Live. Laugh. Love.",
@@ -9,7 +9,7 @@
         "comments": []
     },
     {
-        "username": "EmilysBaby",
+        "userName": "EmilysBaby",
         "email": "me@yahoo.com",
         "password": "littlebabyJill1",
         "bio": "Mom to a wonderful baby girl! Also, a classroom teacher.",
@@ -18,7 +18,7 @@
         "comments": []
     },
     {
-        "username": "Starburns1",
+        "userName": "Starburns1",
         "email": "starburns1@gmail.com",
         "password": "tothemoon1!git status",
         "bio": "Just living life! Live. Laugh. Love.",
