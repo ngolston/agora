@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 const crypto = require("crypto");
 const { v4: uuidv4 } = require("uuid");
 
@@ -42,16 +42,16 @@ const userSchema = new Schema(
 userSchema
   .virtual("password")
   .set(function (password) {
-    // create temporary variable called _password
-    //this._password = password;
+    //create temporary variable called _password
+    this._password = password;
     // generate a timestamp
     this.salt = uuidv4();
     // encryptPassword()
     this.hashed_password = this.encryptPassword(password);
   })
-  // .get(function () {
-  //   return this._password;
-  // });
+  .get(function () {
+    return this._password;
+  });
 
 // methods
 userSchema.methods = {
@@ -68,10 +68,10 @@ userSchema.methods = {
   },
 };
 
-userSchema.virtual('reactionCount').get(function() {
-    return this.posts.reduce((a,b) => a+b,0);
-  });
+userSchema.virtual("reactionCount").get(function () {
+  return this.posts.reduce((a, b) => a + b, 0);
+});
 
-const User = model('User', userSchema);
+const User = model("User", userSchema);
 
 module.exports = User;

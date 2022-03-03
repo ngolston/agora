@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 import PostFormModalCon from "../src/components/Post/PostFormModalCon"
 import AuthModalCon from "../src/components/Auth/AuthModalCon"
+import UserContext from "../src/components/"
 // import Modal from "../src/components/Modal/Modal";
 // import { AccountCircleIcon } from '@mui/icons-material/AccountCircle';
 
