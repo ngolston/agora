@@ -1,52 +1,51 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const postSchema = new Schema(
   {
     title: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 80
+      type: String,
+      required: true,
+      minlength: 1,
+      maxlength: 80,
     },
     text: {
       type: String,
       required: true,
       minlength: 1,
-      maxlength: 400
+      maxlength: 400,
     },
     authorUsername: {
       type: String,
-      required: true
+      required: true,
     },
     authorId: {
-        type: Number,
-        required: true
-      },
+      type: Number,
+    },
     communityId: {
-        type: Number,
-        required: true
-      },
+      type: Number,
+      required: true,
+    },
     comments: {
-        type: Array,
-        required: false
+      type: Array,
+      required: false,
     },
     reactions: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   {
     toJSON: {
-      getters: true
+      getters: true,
     },
-    id: false
+    id: false,
   }
 );
 
-postSchema.virtual('reactionCount').get(function() {
-    return this.reactions++;
-  });
+postSchema.virtual("reactionCount").get(function () {
+  return this.reactions++;
+});
 
-const Post = model('Post', postSchema);
+const Post = model("Post", postSchema);
 
 module.exports = Post;
