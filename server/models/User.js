@@ -34,7 +34,7 @@ const userSchema = new Schema(
     },
     comments: {
         type: Array,
-        minlength: 1
+        minlength: 0
     }
 });
 
@@ -43,15 +43,15 @@ userSchema
   .virtual("password")
   .set(function (password) {
     // create temporary variable called _password
-    this._password = password;
+    //this._password = password;
     // generate a timestamp
     this.salt = uuidv4();
     // encryptPassword()
     this.hashed_password = this.encryptPassword(password);
   })
-  .get(function () {
-    return this._password;
-  });
+  // .get(function () {
+  //   return this._password;
+  // });
 
 // methods
 userSchema.methods = {
