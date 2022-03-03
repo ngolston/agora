@@ -5,7 +5,7 @@ import MainPage from "../Main/MainPage"
 import CommentPage from "../Comment/CommentPage";
 import CommentModal from "../Comment/CommentModal";
 
-export default function RoutingSwitch() {
+export default function NewPage() {
 
   const [postOpen, setPostOpen] = useState(false);
 

@@ -1,22 +1,22 @@
 import React from "react";
 import { useContext } from "react";
-import PostFormModal from "./PostFormModal";
+import PostFormModalCon from "./PostFormModalCon";
 
 export default function PostForm() {
-    const modalContext = useContext(PostFormModal);
+    const modalCon = useContext(PostFormModalCon);
     return (
-        <div className="">
+        <div>
 
-            <div className="">
-                <div className="">
+            <div >
+                <div >
                 </div>
-                <form action="" className="">
+                <form action="" >
                     <input type="text"
                         onFocus={e => {
                             e.preventDefault();
-                            modalContext.setShow(true);
+                            modalCon.setShow(true);
                         }}
-                        className="" placeholder="New post" />
+                        placeholder="New post" />
                 </form>
             </div>
 

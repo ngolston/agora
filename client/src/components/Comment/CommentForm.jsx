@@ -5,7 +5,7 @@ import TextBox from "../Text/TextBox";
 import Button from "./Button";
 import axios from "axios";
 
-function CommentForm(props) {
+export default function CommentForm(props) {
     const userInfo = useContext(UserCon);
     const [commentBody, setCommentBody] = useState('');
     function postComment(e) {
@@ -28,21 +28,20 @@ function CommentForm(props) {
             )}
 
             <form onSubmit={e => postComment(e)}>
-            <TextBox className="w-full mb-3 border border-reddit_
-            onChange={e => setCommentBody(e.target.value)}
-            value={commentBody}
-            placeholder={'Your comment. You can use markdown here'} />
-            <div className="text-right">
-        {!!props.onCancel && (
-            <Button outline
-            className="p-2 mr-2"
-            onClick={e => props.onCancel()}>Cancel</Button>
-        )}
-            <Button className="p-2">Comment</Button>
+                <TextBox
+                    onChange={e => setCommentBody(e.target.value)}
+                    value={commentBody}
+                    placeholder={'Your comment'} />
+                <div>
+                    {!!props.onCancel && (
+                        <Button outline
+
+                            onClick={e => props.onCancel()}>Cancel</Button>
+                    )}
+                    <Button>Comment</Button>
+                </div>
+            </form>
         </div>
-      </form >
-    </div >
-  );
+    );
 }
 
-export default CommentForm;

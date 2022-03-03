@@ -10,7 +10,7 @@ export default function Comment(props) {
 
     const [comment, setComment] = useState({});
     const [comments, setComments] = useState([]);
-    const [commentsTotals, setCommentsTotals] = useState(null);
+
 
 
     function refreshComments() {
