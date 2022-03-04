@@ -28,8 +28,6 @@ const typeDefs = gql`
     text: String!
     contentType: String!
     authorUsername: String!
-    communityId: Int
-    comments: String!
     reactions: Int
   }
 
