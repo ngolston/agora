@@ -1,19 +1,21 @@
-// import { Modal } from "@material-ui/core";
+
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import PostFormModal from "../../components/Post/PostFormModal";
-import AuthModal from "../../components/Auth/AuthModal";
-
+import SidebarTop from "../../components/SidebarTop/SidebarTop";
+import Feed from "../../components/Feed/Feed";
+import SidebarBottom from "../../components/SidebarBottom/SidebarBottom";
+import "./home.css"
 export default function Home() {
-    return (<div>
-        <Router>
+    return (
+        <>
             <Navbar />
-            <NewPage />
-            <PostFormModal />
-            <AuthModal />
-        </Router>
-    </div>
+            <div className="homeContainer">
+                <SidebarTop />
+                <SidebarBottom />
+                <Feed />
+            </div>
 
+        </>
     )
 }
 
