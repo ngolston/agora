@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./EmailInput.css";
+
 
 const EmailInput = (props) => {
     const [focused, setFocused] = useState(false);
