@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 /*import Logo from "./assets/AgoraLogo.png"*/
 import Home from "./pages/home/home";
 function App() {
