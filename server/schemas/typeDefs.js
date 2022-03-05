@@ -10,11 +10,13 @@ const typeDefs = gql`
   }
 
   type User {
-    _id: ID!
     userName: String!
-    text: String!
-    authorUsername: String!
-    posts: [Post]!
+    email: String!
+    hashed_password: String!
+    bio: String!
+    profilePic: String!
+    posts: [Post]
+    Comments: [Comments]
   }
 
   type Community {
@@ -26,10 +28,7 @@ const typeDefs = gql`
 
   type Comments {
     text: String!
-    contentType: String!
     authorUsername: String!
-    communityId: Int
-    comments: String!
     reactions: Int
   }
 

@@ -1,12 +1,12 @@
 import React from "react";
 import "./Register.css"
 import { useState } from "react";
-import EmailInput from "../EmailInput/EmailInput";
+import EmailInput from "../EmailInput/EmailInput"
+
 export default function Register({ setOpenRegister }) {
     const [values, setValues] = useState({
         username: "",
         email: "",
-        birthday: "",
         password: "",
         confirmPassword: "",
     });
@@ -32,13 +32,7 @@ export default function Register({ setOpenRegister }) {
             label: "Email",
             required: true,
         },
-        {
-            id: 3,
-            name: "birthday",
-            type: "date",
-            placeholder: "Birthday",
-            label: "Birthday",
-        },
+
         {
             id: 4,
             name: "password",

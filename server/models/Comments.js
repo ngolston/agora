@@ -8,22 +8,9 @@ const commentSchema = new Schema(
       minlength: 1,
       maxlength: 200,
     },
-    contentType: {
-      type: String,
-      enum: ["TEXT", "PHOTO"],
-      default: "TEXT",
-    },
     authorUsername: {
       type: String,
       required: true,
-    },
-    communityId: {
-      type: String,
-      required: true,
-    },
-    comments: {
-      type: String,
-      required: false,
     },
     reactions: {
       type: Number,

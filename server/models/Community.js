@@ -27,10 +27,6 @@ const communitySchema = new Schema({
   ],
 });
 
-communitySchema.virtual("postCount").get(function () {
-  return this.relatedPosts.length;
-});
-
 const Community = model("Community", communitySchema);
 
 module.exports = Community;

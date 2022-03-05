@@ -24,6 +24,10 @@ const resolvers = {
   //   createPost: async (parent, args) => {
   //     const Post = await Post.create(args);
   //     return Post;
+  //     },
+//createPost: async (parent, args) => {
+  //     const Post = await Post.create(args);
+  //     return Post;
   //   },
   // },
 };

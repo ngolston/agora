@@ -21,14 +21,6 @@ const postSchema = new Schema(
     authorId: {
       type: Number,
     },
-    communityId: {
-      type: Number,
-      required: true,
-    },
-    comments: {
-      type: Array,
-      required: false,
-    },
     reactions: {
       type: Number,
       default: 0,

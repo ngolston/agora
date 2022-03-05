@@ -15,8 +15,7 @@ const userSchema = new Schema({
     type: String,
   },
   hashed_password: {
-    type: String,
-    required: true,
+    type: String
   },
   bio: {
     type: String,
@@ -33,7 +32,7 @@ const userSchema = new Schema({
   },
   comments: {
     type: Array,
-    minlength: 1,
+    minlength: 0,
   },
 });
 
