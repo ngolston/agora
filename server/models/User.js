@@ -1,4 +1,6 @@
 const { Schema, model } = require("mongoose");
+const Post = require("./Post")
+
 
 const userSchema = new Schema(
   {
@@ -26,21 +28,18 @@ const userSchema = new Schema(
     profilePic: {
       type: String,
     },
-    posts: {
-      type: Array,
-      minlength: 0,
-    },
-    comments: {
-      type: Array,
-      minlength: 1,
-    },
-  },
-  { collection: "user-data" }
+    posts: [Post.schema]}
+  //   comments: {
+  //     type: Array,
+  //     minlength: 1,
+  //   },
+  // },
+  // { collection: "user-data" }
 );
 
-userSchema.virtual("reactionCount").get(function () {
-  return this.posts.reduce((a, b) => a + b, 0);
-});
+// userSchema.virtual("reactionCount").get(function () {
+//   return this.posts.reduce((a, b) => a + b, 0);
+// });
 
 const User = model("User", userSchema);
 
