@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 /*import Logo from "./assets/AgoraLogo.png"*/
 import Home from "./pages/home/home";
 import Communities from "./pages/Communities/Communities";
@@ -66,4 +67,21 @@ export default App;
 
 
 
+=======
+import { BrowserRouter, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
+const App = () => {
+  return (
+    <div>
+      <BrowserRouter>
+        <Route path="/login" exact component={Login} />
+        <Route path="/register" exact component={Register} />
+      </BrowserRouter>
+    </div>
+  );
+};
+>>>>>>> 048bb9e1387fa39d3fdc8a65e7f8227b4bbbbb77
+
+export default App;
