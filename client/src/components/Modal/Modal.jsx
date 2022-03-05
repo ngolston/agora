@@ -36,7 +36,7 @@ export default
     );
 }
 
-/*function ModalSignup() {
+function ModalSignup() {
     const [modalShow, setModalShow] = React.useState(false);
 
     return (
@@ -53,7 +53,7 @@ export default
     );
 }
 
-render(<ModalSignup />)*/
+render(<ModalSignup />)
 
 /*
 function Modal({ setOpenModal }) {

@@ -2,6 +2,7 @@ import React from 'react'
 import "./Dashboard.css"
 import Card from "react-bootstrap/Card"
 import Form from "react-bootstrap/Form"
+import Button from "react-bootstrap/Button"
 
 
 export default function Dashboard() {
@@ -27,7 +28,7 @@ export default function Dashboard() {
                     </Card.Text>
 
                 </Card.Body>
-                <Card.Footer> <Button variant="primary">Go somewhere</Button></Card.Footer>
+                <Card.Footer> <Button variant="primary">Post</Button></Card.Footer>
             </Card>
         </Card>
 

@@ -1,9 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Search } from "@material-ui/icons"
-import ModalSignup from "../Modal/Modal";
-import { useState } from "react";
-import LoginModal from "../LoginModal/LoginModal";
+import { Link } from "react-router-dom"
 
 
 
@@ -11,10 +9,6 @@ import LoginModal from "../LoginModal/LoginModal";
 
 
 export default function Navbar() {
-    const [openModal, setOpenModal] = useState(false);
-    const [openLogin, setOpenLoginModal] = useState(false);
-
-
     return (
         <div className="navbarContainer">
             <div className="navbarLeft">
@@ -34,18 +28,9 @@ export default function Navbar() {
             <div className="navbarRight">
                 <div className="navbarLinks">
 
-                    <button className="openModalBtn"
-                    >Create Post</button>
-
-
-                    <button className="openModalBtn" onClick={() => {
-                        setOpenLoginModal(true);
-                    }}>Log In</button>
-                    {openLogin && <LoginModal setOpenLoginModal={setOpenLoginModal} />}
-                    <button className="openModalBtn" onClick={() => {
-                        setOpenModal(true);
-                    }}>Sign Up</button>
-                    {openModal && <ModalSignup setOpenModal={setOpenModal} />}
+                    <Link to="/CreatePost">Create Post</Link>
+                    <Link to="/Login">Log In</Link>
+                    <Link to="Register">Sign Up</Link>
                 </div>
             </div>
 
