@@ -1,29 +1,17 @@
 import React from "react";
-/*import Logo from "./assets/AgoraLogo.png"*/
-import Home from "./pages/home/home";
-function App() {
-  return <Home />
+import { BrowserRouter, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
-}
-
-export default App;
-
-/*function App() {
+const App = () => {
   return (
     <div>
-      <header>head
-        <div className="logoContainer">
-          <img src={Logo} alt="agora" className="agoraLogo" />
-        </div>
-        <form action="">
-          <input type="text" className="" />
-        </form>
-      </header>
+      <BrowserRouter>
+        <Route path="/login" exact component={Login} />
+        <Route path="/register" exact component={Register} />
+      </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
-export default App;*/
-
-
-
+export default App;
