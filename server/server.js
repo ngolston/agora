@@ -11,7 +11,8 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const mongoose = require("mongoose");
-const { User } = require("./models");
+const User = require("./models/User");
+const jwt = require("jsonwebtoken");
 
 // get driver connection
 
@@ -30,6 +31,7 @@ startServer();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === "production") {
@@ -40,16 +42,51 @@ if (process.env.NODE_ENV === "production") {
 //   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 // });
 
-app.post("/signup", (req, res) => {
-  const newUser = new User({ name: req.params.user });
-  newUser.save();
-  if (newUser) {
-    res.status(201).json(newUser);
-  } else {
-    console.log("Uh Oh, something went wrong");
-    res.status(500).json({ error: "Something went wrong" });
+app.post("/api/register", async (req, res) => {
+  console.log(req.body);
+  try {
+    await User.create({
+      userName: req.body.userName,
+      email: req.body.email,
+      password: req.body.password,
+    });
+    res.json({ status: "ok" });
+  } catch (err) {
+    res.json({ status: "error", error: "Duplicate email" });
   }
 });
+
+app.post("/api/login", async (req, res) => {
+  await User.findOne({
+    userName: req.body.userName,
+    email: req.body.email,
+    password: req.body.password,
+  });
+
+  if (user) {
+    const token = jwt.sign(
+      {
+        userName: user.userName,
+        email: user.email,
+      },
+      "secret123"
+    );
+    return res.json({ status: "ok", user: token });
+  } else {
+    return res.json({ status: "error", user: false });
+  }
+});
+
+// app.post("/signup", (req, res) => {
+//   const newUser = new User({ name: req.params.user });
+//   newUser.save();
+//   if (newUser) {
+//     res.status(201).json(newUser);
+//   } else {
+//     console.log("Uh Oh, something went wrong");
+//     res.status(500).json({ error: "Something went wrong" });
+//   }
+// });
 
 dbo.once("open", () => {
   app.listen(PORT, () => {

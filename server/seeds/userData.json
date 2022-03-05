@@ -2,7 +2,7 @@
     {
         "userName": "LakersFan143",
         "email": "lakers@gmail.com",
-        "hashed_password": "kobe1",
+        "password": "kobe1",
         "bio": "Just living life! Live. Laugh. Love.",
         "profilePic": "{url}",
         "posts": [],
@@ -11,7 +11,7 @@
     {
         "userName": "EmilysBaby",
         "email": "me@yahoo.com",
-        "hashed_password": "littlebabyJill1",
+        "password": "littlebabyJill1",
         "bio": "Mom to a wonderful baby girl! Also, a classroom teacher.",
         "profilePic": "{url}",
         "posts": [],
@@ -20,7 +20,7 @@
     {
         "userName": "Starburns1",
         "email": "starburns1@gmail.com",
-        "hashed_password": "tothemoon1!git status",
+        "password": "tothemoon1!git status",
         "bio": "Just living life! Live. Laugh. Love.",
         "profilePic": "{url}",
         "posts": [],
