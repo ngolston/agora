@@ -1,11 +1,37 @@
 import React from 'react'
 import "./Dashboard.css"
+import Card from "react-bootstrap/Card"
+import Form from "react-bootstrap/Form"
 
 
-export default function Dashboard({ setOpenDash }) {
+export default function Dashboard() {
 
     return (
-        <div className="dashboard">
+        <Card body>
+            <Form.Select aria-label="Default select example">
+                <option>Community Options</option>
+                <option value="1">Plants</option>
+                <option value="2">Dogs</option>
+                <option value="3">Dev</option>
+            </Form.Select>
+            <Card>
+                <Card.Header as="h5">
+                    <Button variant="primary">Post</Button>
+                    <Button variant="primary">Images</Button>
+
+                </Card.Header>
+                <Card.Body>
+                    <Card.Title>Post Title</Card.Title>
+                    <Card.Text>
+                        Post Text
+                    </Card.Text>
+
+                </Card.Body>
+                <Card.Footer> <Button variant="primary">Go somewhere</Button></Card.Footer>
+            </Card>
+        </Card>
+
+        /*<div className="dashboard">
             <div className="dashWrap">
                 <div className="dashHead">
                     <img className="logohead" src="/assets/AgoraLogo.png" alt="logo" />
@@ -31,7 +57,7 @@ export default function Dashboard({ setOpenDash }) {
 
                 </div>
             </div>
-        </div>
+        </div>*/
 
     )
 }

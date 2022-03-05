@@ -1,19 +1,20 @@
 import React from "react";
 import "./Navbar.css";
 import { Search } from "@material-ui/icons"
-import Modal from "../Modal/Modal";
+import ModalSignup from "../Modal/Modal";
 import { useState } from "react";
 import LoginModal from "../LoginModal/LoginModal";
 
-import Dashboard from "../Dashboard/Dashboard";
 
-// import { Modal } from "@material-ui/core";
+
+
 
 
 export default function Navbar() {
     const [openModal, setOpenModal] = useState(false);
     const [openLogin, setOpenLoginModal] = useState(false);
-    const [setOpenDash] = useState(false);
+
+
     return (
         <div className="navbarContainer">
             <div className="navbarLeft">
@@ -33,10 +34,8 @@ export default function Navbar() {
             <div className="navbarRight">
                 <div className="navbarLinks">
 
-                    <button className="openModalBtn" onClick={() => {
-                        setOpenDash(true);
-                    }}>Create Post</button>
-                    {<Dashboard />}
+                    <button className="openModalBtn"
+                    >Create Post</button>
 
 
                     <button className="openModalBtn" onClick={() => {
@@ -46,7 +45,7 @@ export default function Navbar() {
                     <button className="openModalBtn" onClick={() => {
                         setOpenModal(true);
                     }}>Sign Up</button>
-                    {openModal && <Modal setOpenModal={setOpenModal} />}
+                    {openModal && <ModalSignup setOpenModal={setOpenModal} />}
                 </div>
             </div>
 

@@ -1,9 +1,10 @@
-.post {
+/* .post {
     width: 100%;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     margin: 30px 0;
+    padding: 10px;
   }
   
   .postWrap {
@@ -14,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+  } */
   
   /* .postTopLeft {
     display: flex;
@@ -38,9 +39,9 @@
       font-size: 12px;
   } */
   
-  .postBody{
+  /* .postBody{
       margin: 20px 0;
-  }
+  } */
   
   /* .postImg{
       margin-top: 20px;
@@ -48,12 +49,12 @@
       max-height: 500px;
       object-fit: contain;
   } */
-  
+/*   
   .postFoot{
       display: flex;
       align-items: center;
       justify-content: space-between;
-  }
+  } */
   
   /* .postBottomLeft{
       display: flex;

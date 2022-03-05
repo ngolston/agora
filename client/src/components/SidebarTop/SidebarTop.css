@@ -5,34 +5,15 @@
     position: sticky;
     top: 50px;
   }
-  
+  .coffee{
+      margin: 10px;
+  }
  
  
  
   
   .sbWrap {
     padding: 20px;
-  }
-  
-  .communityList {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .community{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  
-  .communityBarBtn {
-    width: 150px;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: 500;
   }
   
   
