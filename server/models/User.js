@@ -14,7 +14,7 @@ const userSchema = new Schema({
   email: {
     type: String,
   },
-  hashed_password: {
+  password: {
     type: String,
     required: true,
   },
