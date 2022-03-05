@@ -1,17 +1,54 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Home from "./pages/home/home";
+import Communities from "./pages/Communities/Communities";
+import CreatePost from "./pages/CreatePost/CreatePost";
+import Login from "./pages/Login/Login"
+import Register from "./pages/Register/Register"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import SidebarTop from "./components/SidebarTop/SidebarTop";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Route path="/login" exact component={Login} />
-        <Route path="/register" exact component={Register} />
-      </BrowserRouter>
-    </div>
-  );
-};
+
+    <Router>
+      <div>
+        <>
+          <Navbar />
+          <SidebarTop />
+        </>
+      </div>
+      <div>
+        <>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/Communities">
+              <Communities />
+            </Route>
+            <Route exact path="/CreatePost">
+              <CreatePost />
+            </Route>
+            <Route exact path="/Login">
+              <Login />
+            </Route>
+            <Route exact path="/Register">
+              <Register />
+            </Route>
+          </Switch>
+        </>
+      </div>
+    </Router>
+
+  )
+}
 
 export default App;
+
+
+
+
+
+
+
