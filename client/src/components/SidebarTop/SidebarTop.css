@@ -1,0 +1,38 @@
+.sidebarTop {
+    flex: 3;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 50px;
+  }
+  
+ 
+ 
+ 
+  
+  .sbWrap {
+    padding: 20px;
+  }
+  
+  .communityList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .community{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .communityBarBtn {
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  

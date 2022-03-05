@@ -1,0 +1,35 @@
+
+.sidebarBottom {
+    flex: 3;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 50px;
+  }
+  
+ 
+ 
+ 
+  
+  .coffeeBar {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .buy{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .coffee {
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  
