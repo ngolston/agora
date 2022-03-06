@@ -5,22 +5,17 @@ import CreatePost from "./pages/CreatePost/CreatePost";
 import Login from "./pages/Login/Login"
 import Register from "./pages/Register/Register"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import SidebarTop from "./components/SidebarTop/SidebarTop";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
 
     <Router>
-      <div>
-        <>
-          <Navbar />
-          <SidebarTop />
-        </>
-      </div>
+
       <div>
         <>
           <Switch>
+
             <Route exact path="/">
               <Home />
             </Route>
@@ -35,6 +30,9 @@ function App() {
             </Route>
             <Route exact path="/Register">
               <Register />
+            </Route>
+            <Route exact path="/Profile">
+              <Profile />
             </Route>
           </Switch>
         </>

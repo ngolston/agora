@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./LoginModal.css"
 import LogIn from "../LogIn/LogIn";
 import { useState } from "react";
@@ -28,4 +28,4 @@ export default function LoginModal({ setOpenLoginModal }) {
         </div>
     )
 
-}
+}*/

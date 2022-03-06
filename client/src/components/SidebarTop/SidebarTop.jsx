@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button"
 import ListGroupItem from "react-bootstrap/ListGroupItem"
 import ListGroup from "react-bootstrap/ListGroup"
 import Stack from "react-bootstrap/Stack"
+import Row from "react-bootstrap/Row"
 
 export default function SidebarTop() {
     return (
@@ -27,9 +28,11 @@ export default function SidebarTop() {
                         <Button variant="primary">Explore More Communities</Button>
                     </Card.Body>
                 </Card>
-                <Stack gap={3}>
-                    <SidebarBottom />
-                </Stack>
+                <Row>
+                    <Stack>
+                        <SidebarBottom />
+                    </Stack>
+                </Row>
             </div>
         </>
 
