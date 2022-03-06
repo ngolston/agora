@@ -9,7 +9,7 @@ export default function SidebarBottom() {
                 <Card.Body>
                     <Card.Title>Like What You See?</Card.Title>
 
-                    <Button variant="primary">Buy A Dev Coffee</Button>
+                    <Button variant="primary">Buy A Dev Coffee <i class="fas fa-coffee"></i></Button>
                 </Card.Body>
 
             </Card>

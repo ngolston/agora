@@ -1,4 +1,6 @@
 import React from "react";
+
+import "./App.css";
 import Home from "./pages/home/home";
 import Communities from "./pages/Communities/Communities";
 import CreatePost from "./pages/CreatePost/CreatePost";

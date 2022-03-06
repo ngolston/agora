@@ -21,10 +21,6 @@ const commentSchema = new Schema(
       type: String,
       required: true,
     },
-    comments: {
-      type: String,
-      required: false,
-    },
     reactions: {
       type: Number,
       default: 0,

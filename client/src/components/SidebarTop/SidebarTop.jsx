@@ -20,9 +20,9 @@ export default function SidebarTop() {
                         </Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroupItem>Plants make a link</ListGroupItem>
-                        <ListGroupItem>Dogs make a link </ListGroupItem>
-                        <ListGroupItem>Dev make a link</ListGroupItem>
+                        <ListGroupItem>Sports </ListGroupItem>
+                        <ListGroupItem>Technology </ListGroupItem>
+                        <ListGroupItem>Movies</ListGroupItem>
                     </ListGroup>
                     <Card.Body>
                         <Button variant="primary">Explore More Communities</Button>
