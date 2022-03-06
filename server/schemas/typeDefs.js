@@ -6,7 +6,6 @@ const typeDefs = gql`
     title: String!
     text: String!
     authorUsername: String!
-    communityId: ID!
   }
 
   type User {
@@ -41,8 +40,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createPost(_id: String!): Post
-    createUser(_id: String!): User
+    createPost(title: String!, text: String!, authorUsername: String!): Post
     createCommunity(_id: String!): Community
     createComments(_id: String!): Comments
   }

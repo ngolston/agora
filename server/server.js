@@ -77,17 +77,6 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
-// app.post("/signup", (req, res) => {
-//   const newUser = new User({ name: req.params.user });
-//   newUser.save();
-//   if (newUser) {
-//     res.status(201).json(newUser);
-//   } else {
-//     console.log("Uh Oh, something went wrong");
-//     res.status(500).json({ error: "Something went wrong" });
-//   }
-// });
-
 dbo.once("open", () => {
   app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);

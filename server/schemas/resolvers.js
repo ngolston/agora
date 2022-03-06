@@ -1,5 +1,4 @@
 const { Post, User, Community, Comments } = require("../models");
-// const { modelName } = require("../models/Post");
 
 const resolvers = {
   Query: {
@@ -16,16 +15,12 @@ const resolvers = {
       return Comments.find({});
     },
   },
-  // Mutation: {
-  //   createUser: async (parent, args) => {
-  //     const User = await User.create(args);
-  //     return User;
-  //   },
-  //   createPost: async (parent, args) => {
-  //     const Post = await Post.create(args);
-  //     return Post;
-  //   },
-  // },
+  Mutation: {
+    createPost: async (parent, args) => {
+      const { title, text, authorUsername } = args;
+      return await Post.create({ title, text, authorUsername });
+    },
+  },
 };
 
 module.exports = resolvers;
