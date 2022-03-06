@@ -14,11 +14,6 @@ export default function SidebarBottom() {
 
             </Card>
         </div>
-        /* <div className="sidebarBottom">
-             <div className="coffeeBar">
-                 <span className="buy">Like What You See?</span>
-                 <button className="coffee">Buy A Dev Coffee</button>
-             </div>
-         </div>*/
+
     )
 }
