@@ -1,4 +1,4 @@
-/*import { useState } from "react";
+import { useState } from "react";
 
 
 const EmailInput = (props) => {
@@ -26,4 +26,4 @@ const EmailInput = (props) => {
     );
 };
 
-export default EmailInput;*/
+export default EmailInput;

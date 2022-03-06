@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./Modal.css"
 import Register from "../Register/Register";
 import { useState } from "react";
@@ -53,7 +53,7 @@ function ModalSignup() {
     );
 }
 
-render(<ModalSignup />)
+render(<ModalSignup />)*/
 
 /*
 function Modal({ setOpenModal }) {

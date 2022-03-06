@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button"
 export default function SidebarBottom() {
     return (
         <div className="sidebarBottom">
-            <Card className="text-center">
+            <Card className="text-center mt-5" style={{ width: '18rem' }}>
                 <Card.Body>
                     <Card.Title>Like What You See?</Card.Title>
 

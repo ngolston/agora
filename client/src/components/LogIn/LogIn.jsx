@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import "./LogIn.css"
 export default function LogIn() {
     return (
@@ -23,3 +23,4 @@ export default function LogIn() {
         </div>
     )
 }
+*/
