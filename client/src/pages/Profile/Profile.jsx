@@ -1,14 +1,15 @@
 import React from 'react'
-import Dashboard from '../../components/Dashboard/Dashboard'
 import Navbar from '../../components/Navbar/Navbar'
 import SidebarTop from '../../components/SidebarTop/SidebarTop'
-import Container from "react-bootstrap/Container"
-import Col from 'react-bootstrap/Col'
+import RightBar from '../../components/RightBar/RightBar'
+import Post from '../../components/Post/Post'
 import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
-export default function CreatePost() {
+import Container from "react-bootstrap/Container"
+
+export default function Profile() {
     return (
-
         <div>
             <Navbar />
             <Container className="d-flex justify-content-around">
@@ -17,7 +18,10 @@ export default function CreatePost() {
                         <SidebarTop />
                     </Col>
                     <Col>
-                        <Dashboard />
+                        <Post />
+                    </Col>
+                    <Col>
+                        <RightBar />
                     </Col>
                 </Row>
 

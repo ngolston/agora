@@ -2,12 +2,13 @@ import React from 'react'
 import "./Dashboard.css"
 import Card from "react-bootstrap/Card"
 import Form from "react-bootstrap/Form"
+import Button from "react-bootstrap/Button"
 
 
 export default function Dashboard() {
 
     return (
-        <Card body>
+        <Card body style={{ width: '40rem' }}>
             <Form.Select aria-label="Default select example">
                 <option>Community Options</option>
                 <option value="1">Plants</option>
@@ -15,7 +16,7 @@ export default function Dashboard() {
                 <option value="3">Dev</option>
             </Form.Select>
             <Card>
-                <Card.Header as="h5">
+                <Card.Header as="h5" className="d-flex justify-content-end">
                     <Button variant="primary">Post</Button>
                     <Button variant="primary">Images</Button>
 
@@ -27,7 +28,7 @@ export default function Dashboard() {
                     </Card.Text>
 
                 </Card.Body>
-                <Card.Footer> <Button variant="primary">Go somewhere</Button></Card.Footer>
+                <Card.Footer className="d-flex justify-content-end"> <Button variant="primary">Post</Button></Card.Footer>
             </Card>
         </Card>
 

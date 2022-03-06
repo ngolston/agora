@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./Modal.css"
 import Register from "../Register/Register";
 import { useState } from "react";
@@ -36,7 +36,7 @@ export default
     );
 }
 
-/*function ModalSignup() {
+function ModalSignup() {
     const [modalShow, setModalShow] = React.useState(false);
 
     return (

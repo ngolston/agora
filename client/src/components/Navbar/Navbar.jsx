@@ -1,9 +1,10 @@
 import React from "react";
 import "./Navbar.css";
 import { Search } from "@material-ui/icons"
-import ModalSignup from "../Modal/Modal";
-import { useState } from "react";
-import LoginModal from "../LoginModal/LoginModal";
+import { Link } from "react-router-dom"
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from "react-bootstrap/DropdownButton"
+
 
 
 
@@ -11,10 +12,6 @@ import LoginModal from "../LoginModal/LoginModal";
 
 
 export default function Navbar() {
-    const [openModal, setOpenModal] = useState(false);
-    const [openLogin, setOpenLoginModal] = useState(false);
-
-
     return (
         <div className="navbarContainer">
             <div className="navbarLeft">
@@ -33,19 +30,39 @@ export default function Navbar() {
 
             <div className="navbarRight">
                 <div className="navbarLinks">
+                    <DropdownButton id="dropdown-item-button" title="Menu">
+                        <Dropdown.Item as="button">
+                            <Link to="/CreatePost">
+                                Create Post
+                            </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item as="button">
+                            <Link to="/Login">
+                                Login
+                            </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item as="button">
+                            <Link to="/Register">
+                                Register
+                            </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item as="button">
+                            <Link to="/Communities">
+                                Communities
+                            </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item as="button">
+                            <Link to="/Profile">
+                                Profile
+                            </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item as="button">
+                            <Link to="/">
+                                Home
+                            </Link>
+                        </Dropdown.Item>
 
-                    <button className="openModalBtn"
-                    >Create Post</button>
-
-
-                    <button className="openModalBtn" onClick={() => {
-                        setOpenLoginModal(true);
-                    }}>Log In</button>
-                    {openLogin && <LoginModal setOpenLoginModal={setOpenLoginModal} />}
-                    <button className="openModalBtn" onClick={() => {
-                        setOpenModal(true);
-                    }}>Sign Up</button>
-                    {openModal && <ModalSignup setOpenModal={setOpenModal} />}
+                    </DropdownButton>
                 </div>
             </div>
 

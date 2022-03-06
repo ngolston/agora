@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./Register.css"
 import { useState } from "react";
 import EmailInput from "../EmailInput/EmailInput"
@@ -101,4 +101,4 @@ export default function Register({ setOpenRegister }) {
 
     );
 
-}
+}*/
