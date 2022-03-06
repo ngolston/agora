@@ -10,6 +10,7 @@ export default function RightBar() {
                 <Card.Body>
                     <Card.Title>Name</Card.Title>
                     <Card.Text>
+
                         About you
                     </Card.Text>
 

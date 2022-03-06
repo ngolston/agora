@@ -17,19 +17,7 @@
     list-style: none;
   }
   
-  .buy{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
   
   
-  .coffee {
-    width: 150px;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: 500;
-  }
   
   
