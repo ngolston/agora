@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Button from "react-bootstrap/Button"
+import { Link } from "react-router-dom"
 
 
 export default function Register() {
@@ -59,9 +60,11 @@ export default function Register() {
                         }} />
                     </Col>
                 </Row>
-                <Button variant="primary" type="submit" onClick={addUser}>
-                    Submit
-                </Button>
+                <Link to="/Profile">
+                    <Button variant="primary" type="submit" onClick={addUser}>
+                        Submit
+                    </Button>
+                </Link>
             </Form>
         </Container>
     );
