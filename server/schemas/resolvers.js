@@ -20,6 +20,10 @@ const resolvers = {
       const { title, text, authorUsername } = args;
       return await Post.create({ title, text, authorUsername });
     },
+    createCommunity: async (parent, args) => {
+      const { title } = args;
+      return await Community.create({ title });
+    },
   },
 };
 

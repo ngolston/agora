@@ -18,8 +18,8 @@ const typeDefs = gql`
 
   type Community {
     title: String!
-    description: String!
-    image: String!
+    description: String
+    image: String
     relatedPosts: [Post]
   }
 
@@ -41,7 +41,7 @@ const typeDefs = gql`
 
   type Mutation {
     createPost(title: String!, text: String!, authorUsername: String!): Post
-    createCommunity(_id: String!): Community
+    createCommunity(title: String!): Community
     createComments(_id: String!): Comments
   }
 `;
