@@ -11,5 +11,8 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8da0b6462b5743ebe423f5cedd0103cf65c4e517
