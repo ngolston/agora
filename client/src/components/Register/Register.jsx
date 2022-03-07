@@ -59,7 +59,7 @@ function App() {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 </Form.Group>
-                <Link to="/Profile">
+                <Link to="/Login">
                     <Button className="registerBtn" variant="primary" type="submit" value="Register">
                         Submit
                     </Button>
