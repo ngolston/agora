@@ -12,6 +12,13 @@ const commentSchema = new Schema(
       type: String,
       required: true,
     },
+<<<<<<< HEAD
+=======
+    communityId: {
+      type: String,
+      required: true,
+    },
+>>>>>>> ff52511289db8cb6b1ba0af658f92292b8991f74
     reactions: {
       type: Number,
       default: 0,

@@ -1,7 +1,10 @@
 const { Schema, model } = require("mongoose");
+<<<<<<< HEAD
 const Post = require("./Post")
 
 
+=======
+>>>>>>> ff52511289db8cb6b1ba0af658f92292b8991f74
 const userSchema = new Schema(
   {
     userName: {
