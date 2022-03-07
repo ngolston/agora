@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client"
 import { setContext } from "@apollo/client/link/context"
+import "./App.css"
+
 
 const httpLink = createHttpLink({
   uri: '/graphql'
