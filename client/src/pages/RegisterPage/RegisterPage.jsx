@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import SidebarTop from '../../components/SidebarTop/SidebarTop';
-import Login from '../../components/LogIn/LogIn';
+import Register from '../../components/Register/Register';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -19,7 +19,7 @@ export default function RegisterPage() {
                             <SidebarTop />
                         </Col>
                         <Col>
-                            <Login />
+                            <Register />
                         </Col>
                     </Row>
 
@@ -29,3 +29,8 @@ export default function RegisterPage() {
         </div>
     );
 }
+
+
+
+
+

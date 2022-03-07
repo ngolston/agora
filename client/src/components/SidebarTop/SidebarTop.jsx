@@ -7,7 +7,7 @@ import ListGroupItem from "react-bootstrap/ListGroupItem"
 import ListGroup from "react-bootstrap/ListGroup"
 import Stack from "react-bootstrap/Stack"
 import Row from "react-bootstrap/Row"
-
+import { Link } from "react-router-dom"
 export default function SidebarTop() {
     return (
         <>
@@ -25,7 +25,9 @@ export default function SidebarTop() {
                         <ListGroupItem>Movies</ListGroupItem>
                     </ListGroup>
                     <Card.Body>
-                        <Button variant="primary">Explore More Communities</Button>
+                        <Link to="/Communities">
+                            <Button variant="primary">Explore More Communities</Button>
+                        </Link>
                     </Card.Body>
                 </Card>
                 <Row>
@@ -40,27 +42,4 @@ export default function SidebarTop() {
     )
 }
 
-/*<div className="sidebarTop">
-    <div className="sbWrap">
-        <ul className="communityList">
 
-            <li className="community">
-                <span className="communityListTxt">Communities</span>
-
-            </li>
-            <li className="community">
-                <span className="communityListTxt">Communities</span>
-
-            </li>
-            <li className="community">
-                <span className="communityListTxt">Communities</span>
-
-            </li>
-        </ul>
-        <button className="communityBarBtn">Explore More Communities</button>
-        <div>
-            <SidebarBottom />
-        </div>
-    </div>
-
-</div>*/

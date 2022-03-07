@@ -13,13 +13,17 @@ export default function Home() {
     return (
         <div>
             <Navbar />
-            <Container className="d-flex justify-content-around">
+            <Container className="justify-content-around">
+
                 <Row>
-                    <Col md={4}>
+                    <Col className="align-self-start">
                         <SidebarTop />
                     </Col>
-                    <Stack style={{ width: '18rem' }} md={4}>
-                        <Col>
+
+
+
+                    <Stack style={{ width: '18rem' }} md={1}>
+                        <Col className="align-self-center">
                             <Post />
 
 
@@ -29,11 +33,13 @@ export default function Home() {
                             <Post />
                         </Col>
                     </Stack>
-
                 </Row>
+
+
 
             </Container>
         </div>
+
 
     )
 }

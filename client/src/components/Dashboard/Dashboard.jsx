@@ -17,48 +17,29 @@ export default function Dashboard() {
             </Form.Select>
             <Card>
                 <Card.Header as="h5" className="d-flex justify-content-end">
-                    <Button variant="primary">Post</Button>
-                    <Button variant="primary">Images</Button>
+
+                    <Button variant="primary">Add An Image</Button>
 
                 </Card.Header>
                 <Card.Body>
                     <Card.Title>Post Title</Card.Title>
-                    <Card.Text>
-                        Post Text
-                    </Card.Text>
-
+                    <Form>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Start adding to your community</Form.Label>
+                            <Form.Control as="textarea" rows={3} />
+                        </Form.Group>
+                    </Form>
                 </Card.Body>
                 <Card.Footer className="d-flex justify-content-end"> <Button variant="primary">Post</Button></Card.Footer>
             </Card>
         </Card>
 
-        /*<div className="dashboard">
-            <div className="dashWrap">
-                <div className="dashHead">
-                    <img className="logohead" src="/assets/AgoraLogo.png" alt="logo" />
-                </div>
-                <div className="dashBody">
-                    <input placeholder="Start typing to begin your post" type="text" className="dashInput" />
-                </div>
-                <hr className="dashHr" />
 
-                <div className="dashFoot">
-                    <div className="dashChoices">
-                        <div className="dashOption">
-                            <span className="dashOptionTxt">Add a picture</span>
-                            <button className="dashBtn">Post</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="cancel">
-                    <button onClick={() => {
-                        setOpenDash(false);
-                    }}>Cancel</button>
-                    <button>Submit</button>
 
-                </div>
-            </div>
-        </div>*/
+
+
+
+
 
     )
 }

@@ -13,7 +13,7 @@ export default function Communities() {
         <div>
             <Navbar />
             <Container>
-                <Row>
+                <Row className="d-flex justify-content-around">
                     <Col>
                         <SidebarTop />
                     </Col>
