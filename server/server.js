@@ -63,11 +63,11 @@ app.post("/api/login", async (req, res) => {
     password: req.body.password,
   });
 
-  if (user) {
+  if (User) {
     const token = jwt.sign(
       {
-        userName: user.userName,
-        email: user.email,
+        userName: User.userName,
+        email: User.email,
       },
       "secret123"
     );
@@ -76,17 +76,6 @@ app.post("/api/login", async (req, res) => {
     return res.json({ status: "error", user: false });
   }
 });
-
-// app.post("/signup", (req, res) => {
-//   const newUser = new User({ name: req.params.user });
-//   newUser.save();
-//   if (newUser) {
-//     res.status(201).json(newUser);
-//   } else {
-//     console.log("Uh Oh, something went wrong");
-//     res.status(500).json({ error: "Something went wrong" });
-//   }
-// });
 
 dbo.once("open", () => {
   app.listen(PORT, () => {

@@ -23,7 +23,7 @@ const postSchema = new Schema(
     },
     communityId: {
       type: Number,
-      required: true,
+      required: false,
     },
     comments: {
       type: Array,
