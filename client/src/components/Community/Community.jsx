@@ -1,23 +1,23 @@
 import React from 'react'
 import Post from "../Post/Post"
 import Card from "react-bootstrap/Card"
-
+import "./Community.css"
 export default function Community() {
     return (
         <div>
 
-            <Card>
-                <Card.Header as="h5" className="d-flex justify-content-end">
+            <Card className="community">
+                <Card.Header id="communityHead" as="h5" className="d-flex justify-content-end">
 
 
-                    <Card.Title>Community title</Card.Title>
+                    <Card.Title >Community title</Card.Title>
 
                 </Card.Header>
-                <Card.Body>
+                <Card.Body className="cardBody">
                     <Post />
 
                 </Card.Body>
-                <Card.Footer className="d-flex justify-content-end"> </Card.Footer>
+
             </Card>
 
 

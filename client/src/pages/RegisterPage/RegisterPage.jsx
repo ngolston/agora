@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
-import SidebarTop from '../../components/SidebarTop/SidebarTop';
+import "./RegisterPage.css"
 import Register from '../../components/Register/Register';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -15,9 +15,6 @@ export default function RegisterPage() {
                 <Navbar />
                 <Container className="d-flex justify-content-around">
                     <Row>
-                        <Col>
-                            <SidebarTop />
-                        </Col>
                         <Col>
                             <Register />
                         </Col>

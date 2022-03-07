@@ -1,0 +1,14 @@
+.login {
+    background-color: white;
+    color: black;
+    border: white;
+    margin-top: 50px;
+}
+
+.loginHead{
+    margin-top: 15px;
+}
+
+.loginBtn{
+    margin-bottom: 15px;
+}

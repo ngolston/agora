@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import SidebarTop from '../../components/SidebarTop/SidebarTop'
-import RightBar from '../../components/RightBar/RightBar'
 import Post from '../../components/Post/Post'
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -21,15 +20,14 @@ export default function Profile() {
                     <Col>
                         <SidebarTop />
                     </Col>
-                    <Stack style={{ width: '18rem' }} md={1}>
-                        <Col>
-                            <Dashboard />
-                            <Post />
-                        </Col>
+
+                    <Stack style={{ width: '18rem' }} gap={5}>
+
+                        <Dashboard />
+                        <Post />
+
                     </Stack>
-                    <Col>
-                        <RightBar />
-                    </Col>
+
                 </Row>
 
             </Container>
