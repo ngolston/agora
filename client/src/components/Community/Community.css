@@ -1,0 +1,15 @@
+.community{
+    background-color: white;
+    color: black;
+    border: white;
+    margin-top: 50px;
+}
+
+#communityHead{
+    background-color: grey;
+}
+
+.cardBody{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}

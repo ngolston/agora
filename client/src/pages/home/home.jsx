@@ -22,7 +22,7 @@ export default function Home() {
 
 
 
-                    <Stack style={{ width: '18rem' }} md={1}>
+                    <Stack style={{ width: '18rem' }} gap={3}>
                         <Col className="align-self-center">
                             <Post />
 

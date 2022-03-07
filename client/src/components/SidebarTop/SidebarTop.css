@@ -1,9 +1,8 @@
 .sidebarTop {
-    flex: 3;
-    height: calc(100vh - 50px);
-    overflow-y: scroll;
-    position: sticky;
-    top: 50px;
+   
+    margin-top: 50px;
+ 
+  
   }
   .coffee{
       margin: 10px;

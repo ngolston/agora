@@ -12,7 +12,7 @@ export default function SidebarTop() {
     return (
         <>
             <div>
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '18rem' }} className="sidebarTop">
                     <Card.Body>
                         <Card.Title>Agora's Top Communities</Card.Title>
                         <Card.Text>

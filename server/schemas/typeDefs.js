@@ -2,32 +2,32 @@ const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Post {
-    _id: ID!
+    postId: String!
     title: String!
     text: String!
     authorUsername: String!
   }
 
   type User {
-    _id: ID!
+    postId: String!
     userName: String!
     text: String!
     authorUsername: String!
-    posts: [Post]!
+    posts: String!
   }
 
   type Community {
     title: String!
-    description: String
-    image: String
-    relatedPosts: [Post]
+    description: String!
+    image: String!
+    relatedPosts: String!
   }
 
   type Comments {
     text: String!
     contentType: String!
     authorUsername: String!
-    communityId: Int
+    communityId: String!
     comments: String!
     reactions: Int
   }
