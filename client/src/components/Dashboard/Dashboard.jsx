@@ -31,7 +31,7 @@ export default function Dashboard() {
     // };
 
     return (
-        <Card className="dash" body style={{ width: '40rem' }}>
+        <Card className="dash" body style={{ width: '18rem' }}>
             <Form.Select aria-label="Default select example">
                 <option>Community Options</option>
                 <option value="1">Sports</option>

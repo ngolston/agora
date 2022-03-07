@@ -1,4 +1,3 @@
-
 import React from "react";
 import Post from "../../components/Post/Post";
 import Navbar from "../../components/Navbar/Navbar";
@@ -20,22 +19,13 @@ export default function Home() {
                         <SidebarTop />
                     </Col>
 
-
-
                     <Stack style={{ width: '18rem' }} gap={3}>
                         <Col className="align-self-center">
                             <Post />
 
-
-                            <Post />
-
-
-                            <Post />
                         </Col>
                     </Stack>
                 </Row>
-
-
 
             </Container>
         </div>

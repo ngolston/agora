@@ -15,7 +15,6 @@ query {
 export const ADD_NEW_POST = gql`
 query {
     Post {
-      _id
       title
       text
       authorUsername

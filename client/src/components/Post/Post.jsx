@@ -30,7 +30,7 @@ export default function Post() {
             {post.map((val) => {
                 return (
 
-                    <Container style={{ width: '40rem' }}>
+                    <Container style={{ width: '18rem' }}>
                         <Stack>
                             <Card className="post">
                                 <Card.Header className="postHead" placeholder="User" onChange={(e) => {
