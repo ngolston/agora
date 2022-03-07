@@ -1,104 +1,69 @@
-/*import React from "react";
-import "./Register.css"
+import React from "react";
 import { useState } from "react";
-import EmailInput from "../EmailInput/EmailInput"
+import Container from "react-bootstrap/Container"
+import { CREATE_USER_MUTATION } from "../../GraphQl/Mutations"
+import { useMutation } from "@apollo/client"
+import Form from "react-bootstrap/Form"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
+import Button from "react-bootstrap/Button"
 
-export default function Register({ setOpenRegister }) {
-    const [values, setValues] = useState({
-        username: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-    });
 
-    const inputs = [
-        {
-            id: 1,
-            name: "username",
-            type: "text",
-            placeholder: "Username",
-            errorMessage:
-                "Username should be 3-16 characters and shouldn't include any special character!",
-            label: "Username",
-            pattern: "^[A-Za-z0-9]{3,16}$",
-            required: true,
-        },
-        {
-            id: 2,
-            name: "email",
-            type: "email",
-            placeholder: "Email",
-            errorMessage: "It should be a valid email address!",
-            label: "Email",
-            required: true,
-        },
+export default function Register() {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-        {
-            id: 4,
-            name: "password",
-            type: "password",
-            placeholder: "Password",
-            errorMessage:
-                "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
-            label: "Password",
-            pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
-            required: true,
-        },
-        {
-            id: 5,
-            name: "confirmPassword",
-            type: "password",
-            placeholder: "Confirm Password",
-            errorMessage: "Passwords don't match!",
-            label: "Confirm Password",
-            pattern: values.password,
-            required: true,
-        },
-    ];
+    const [createUser, { error }] = useMutation(CREATE_USER_MUTATION);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
+    const addUser = () => {
+        createUser({
+            variables: {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+            },
+        });
 
-    const onChange = (e) => {
-        setValues({ ...values, [e.target.name]: e.target.value });
+        if (error) {
+            console.log(error);
+        }
     };
 
     return (
-        <div className="modalBG">
-            <div className="modalContainer">
-                <div className="titleCloseBtn">
-                    <button onClick={() => {
-                        setOpenRegister(false);
-                    }}> X </button>
-                </div>
-                <form onSubmit={handleSubmit}>
-                    <div className="title">
-                        <h1>Create User Profile</h1>
-                        {inputs.map((input) => (
-                            <EmailInput
-                                key={input.id}
-                                {...input}
-                                value={values[input.name]}
-                                onChange={onChange}
-                            />
-                        ))}
-                    </div>
-                    <div className="body">
-                        <p>choose a unique username and secure password in order to continue</p>
-                    </div>
-                    <div className="footer">
-                        <button onClick={() => {
-                            setOpenRegister(false);
-                        }}>Cancel</button>
-                        <button>Submit</button>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
+        <Container>
+            <Form>
+                <Row>
+                    <Col>
+                        <Form.Control placeholder="First name" onChange={(e) => {
+                            setFirstName(e.target.value);
+                        }} />
+                    </Col>
+                    <Col>
+                        <Form.Control placeholder="Last name" onChange={(e) => {
+                            setLastName(e.target.value);
+                        }} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form.Control placeholder="Email" onChange={(e) => {
+                            setEmail(e.target.value);
+                        }} />
+                    </Col>
+                    <Col>
+                        <Form.Control placeholder="Password" onChange={(e) => {
+                            setPassword(e.target.value);
+                        }} />
+                    </Col>
+                </Row>
+                <Button variant="primary" type="submit" onClick={addUser}>
+                    Submit
+                </Button>
+            </Form>
+        </Container>
     );
 
-}*/
+}
