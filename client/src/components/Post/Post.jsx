@@ -10,11 +10,12 @@ export default function Post() {
         <Container>
             <Stack>
                 <Card>
-                    <Card.Header>Author/logo?</Card.Header>
+                    <Card.Header placeholder="User"></Card.Header>
                     <Card.Body>
-                        <Card.Title>Post</Card.Title>
-                        <Card.Text>
-                            This is a post that you can add to a community!
+                        <Card.Title placeholder="Post Title"></Card.Title>
+                        <Card.Text placeholder="text">
+
+
                         </Card.Text>
                         <Button variant="primary">Like</Button>
                         <Button>Dislike</Button>
