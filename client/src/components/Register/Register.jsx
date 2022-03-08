@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import "./Register.css"
@@ -59,9 +59,11 @@ function App() {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 </Form.Group>
-                <Button className="registerBtn" variant="primary" type="submit" value="Register">
-                    Submit
-                </Button>
+                <Link to="/Login">
+                    <Button className="registerBtn" variant="primary" type="submit" value="Register">
+                        Submit
+                    </Button>
+                </Link>
             </Form>
         </Container>
 
