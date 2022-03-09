@@ -1,7 +1,7 @@
 .navbarContainer{
     height: 50px;
     width: 100%;
-    background-color: grey;
+    background-color:black;
     display: flex;
     align-items: center;
     /* position: sticky; */
@@ -63,4 +63,18 @@
     border: black;
 
 }
+.openModalBtn{
+    margin-right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 0;
+    border-top: 3px solid #01fd91;
+    border-bottom: 3px solid transparent;
+    background: #ddd;
+    border-radius: 5px;
+}
 
+.openModalBtn:hover {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid #16acf2;
+}
