@@ -1,12 +1,14 @@
 //Fixed the Project
 
 import { useState } from "react";
+import "./Login.css"
+import Navbar from '../../components/Navbar/Navbar'
 import Container from "react-bootstrap/Container"
+import Card from "react-bootstrap/Card"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
-import "./LogIn.css"
-import { Link } from "react-dom"
-function LogIn() {
+
+function App() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -34,16 +36,23 @@ function LogIn() {
         }
     }
 
-    return (
+    return(
         <div>
-            <Container style={{ width: '40rem' }} className="login">
+            <>
+                <Navbar />
+
+            </>
+            <Container>
+                <Card>
+
+                </Card>
 
                 <Form onSubmit={loginUser}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label className="loginHead">Email address</Form.Label>
+                        <Form.Label>Email address</Form.Label>
                         <Form.Control value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter email" />
                         <Form.Text className="text-muted">
-                            Please enter a valid email
+                            We'll never share your email with anyone else.
                         </Form.Text>
                     </Form.Group>
 
@@ -51,11 +60,12 @@ function LogIn() {
                         <Form.Label>Password</Form.Label>
                         <Form.Control value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
                     </Form.Group>
-                    <Link to="/Profile">
-                        <Button className="loginBtn" variant="primary" type="submit" value="Login">
-                            Submit
-                        </Button>
-                    </Link>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Check me out" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit" value="Login">
+                        Submit
+                    </Button>
                 </Form>
 
             </Container>
@@ -63,4 +73,4 @@ function LogIn() {
     )
 };
 
-export default LogIn;
+export default App;
